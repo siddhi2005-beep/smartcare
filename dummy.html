@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: #E74C3C;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Dashboard Container */
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        .stat-card p {
+            font-size: 1.2rem;
+            color: #718096;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievements h3 {
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        .achievements ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .achievements ul li {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+
+        /* Main Doctors Section */
+        .doctors {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .doctor-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .doctor-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .doctor-card h4 {
+            font-size: 1.3rem;
+            color: #2C3E50;
+        }
+
+        .doctor-card p {
+            color: #718096;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #E74C3C;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div>City Hospital</div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+
+        <!-- Stats Section (Beds, Doctors Available, etc.) -->
+        <div class="stats">
+            <!-- Available Beds Card -->
+            <div class="stat-card">
+                <h3>Available Beds</h3>
+                <p><strong>ICU:</strong> 5</p>
+                <p><strong>General Ward:</strong> 12</p>
+            </div>
+
+            <!-- Doctors Available Card -->
+            <div class="stat-card">
+                <h3>Doctors Available</h3>
+                <p><strong>Cardiology:</strong> 3</p>
+                <p><strong>Orthopedics:</strong> 5</p>
+            </div>
+
+            <!-- Patients Admitted Card -->
+            <div class="stat-card">
+                <h3>Patients Admitted</h3>
+                <p><strong>Current Patients:</strong> 40</p>
+                <p><strong>Discharged Today:</strong> 3</p>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="achievements">
+            <h3>Hospital Achievements</h3>
+            <ul>
+                <li>Top-rated hospital in the region for 3 years in a row</li>
+                <li>Awarded for excellence in patient care</li>
+                <li>Successfully treated over 50,000 patients</li>
+            </ul>
+        </div>
+
+        <!-- Main Doctors Section -->
+        <div class="doctors">
+            <!-- Doctor Card 1 -->
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor 1">
+                <h4>Dr. John Doe</h4>
+                <p>Cardiology Specialist</p>
+            </div>
+
+            <!-- Doctor Card 2 -->
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor 2">
+                <h4>Dr. Sarah Smith</h4>
+                <p>Orthopedics Specialist</p>
+            </div>
+
+            <!-- Doctor Card 3 -->
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor 3">
+                <h4>Dr. William Lee</h4>
+                <p>General Medicine</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hospital Management System | <a href="mailto:contact@hospital.com">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>
