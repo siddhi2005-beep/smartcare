@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Login & Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background-color: rgb(227, 141, 184);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin: 15px 0;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .toggle-btn:hover {
+      color: #0056b3;
+    }
+
+    .form-container {
+      display: none;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+    .btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: #E74C3C;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="login-form" class="form-container active">
+      <h2>Hospital Login</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <input type="text" name="hospital-email" placeholder="Hospital Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="hospital-password" placeholder="Password" required>
+        </div>
+        <button type="button" onclick="window.location.href='dummy.html'">Login</button>
+      </form>
+      <button class="toggle-btn" onclick="toggleForms()">Don't have an account? Sign up</button>
+    </div>
+
+    <div id="signup-form" class="form-container">
+      <h2>Hospital Sign Up</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <input type="text" name="hospital-name" placeholder="Hospital Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="registration-number" placeholder="Registration Number" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="hospital-email" placeholder="Hospital Email" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="hospital-phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="hospital-address" placeholder="Hospital Address" required>
+        </div>
+        <div class="form-group">
+          <input type="number" name="bed-count" placeholder="Number of Beds" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="hospital-password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+        </div>
+        <button type="button" onclick="window.location.href='dummy.html'">Sign Up</button>
+      </form>
+      <button class="toggle-btn" onclick="toggleForms()">Already have an account? Login</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleForms() {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+      loginForm.classList.toggle('active');
+      signupForm.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
