@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCare - Healthcare Made Smart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            padding: 1rem 5%;
+            position: fixed;+
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2C3E50;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: #E74C3C;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2C3E50;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #E74C3C;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #2C3E50;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            margin-top: 80px;
+            padding: 4rem 5%;
+            text-align: center;
+            background: linear-gradient(135deg, #E74C3C, #2C3E50);
+            color: white;
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Slideshow Section */
+        .slideshow {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 4s ease-in-out;
+            object-fit: cover;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        /* About Section */
+        #about {
+            padding: 4rem 5%;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #2C3E50;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: white;
+            padding: 3rem 5%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #E74C3C;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #E74C3C;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <h2>SmartCare</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="query.html">Help</a>
+            <div class="dropdown">
+                <a>Login ▼</a>
+                <div class="dropdown-content">
+                    <a href="signup.html">Login for User</a>
+                    <a href="#">Login for Hospital</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>Welcome to SmartCare: Empowering HealthCare</h1>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <img src="download.jpg" alt="Emergency Response" class="slide active">
+        <img src="images.jpeg" alt="Hospital Care" class="slide">
+        <img src="images (1).jpeg" alt="Medical Professional" class="slide">
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <p>SmartCare: Empowering Healthcare through Real-Time Information and Seamless Access. It allows patients to view real-time bed availability in nearby hospitals, ensuring informed decision-making during medical emergencies. Additionally, patients can explore comprehensive doctor profiles, including specialization, qualifications, consultation timings, and contact details, enabling them to find the best care quickly. displays real-time information about bed availability in the hospital, allowing patients to see which beds are vacant at a glance. The site will also feature comprehensive profiles of doctors, highlighting their specializations, consultation timings, qualifications, and contact details.  enhance hospital transparency, improve patient experience, and streamline the process of connecting patients with the right healthcare professionals in a timely manner.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@smartcare.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Healthcare Ave, Medical District</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#" style="color: white; text-decoration: none;">Find a Doctor</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Emergency Services</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Book Appointment</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 2 seconds
+        setInterval(nextSlide, 2000);
+
+        // Smooth scroll for About Us link
+        document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
